@@ -1,0 +1,31 @@
+{% extends 'Otify/index.html' %}
+{% load static %}
+
+{% block status%}
+    <a href="{% url 'logout' %}">logout</a>
+{% endblock %}
+
+{% block user_welc %}
+    <h1> Welcome {{user}}</h1>
+{% endblock %}
+
+{% block body %}
+
+{% for each in complain%}
+
+<div class="card text-center w-50 mx-auto">
+    <div class="card-header">
+        {{each.category}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{each.region}}</h5>
+      <p class="card-text">{{each.description}}</p>
+    </div>
+    <div class="card-footer text-muted">
+        {{each.date}}
+    </div>
+  </div>
+
+  <br><br>
+{% endfor %}
+{% endblock %}

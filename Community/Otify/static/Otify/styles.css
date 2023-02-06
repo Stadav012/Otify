@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.navbar-brand {
+    display: flex;
+    padding: 20px;
+    column-gap: 20px;
+}
+
+.navbar-brand > h1 {
+    text-align: center;
+}
+
+.complain{
+    text-align: center;
+    display: flex;
+}
